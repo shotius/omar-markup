@@ -1,0 +1,64 @@
+.wrapper-container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.Rectangle1 {
+    width: 1280px;
+    height: 80px;
+    display: flex;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.Logo-Black_Full {
+    background-image: url("../assests/Logo\ Black\ Full-1.svg");
+    margin-top: 28px;
+    margin-left: 138px;
+    height: 24px;
+    width: 125px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-link {
+    font-size: 14px;
+    height: 17px;
+    text-transform: uppercase;
+    font-family: 'Lato';
+    margin-right: 31px;
+}
+
+.btn-signup {
+    margin-right: 31px;
+    font-family: 'Lato';
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    height: 40px;
+    width: 69px;
+    background-color: #80334B;
+    color: white;
+    border: 1px solid #80334B;
+    border-radius: 5px;
+}
+
+.login { 
+    margin-right: 153px;
+    color: #80334B;
+}
+
+.nav-link:hover {
+    font-weight: 900;
+    border-bottom: 3px solid  #80334B;
+}
+
+.Large-Hero {
+    background-image: url('../assests/Large\ Hero.png');
+    width: 1280px;
+    height: 720px;
+}
