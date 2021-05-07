@@ -54,7 +54,10 @@
 
 .nav-link:hover {
     font-weight: 900;
-    border-bottom: 3px solid  #80334B;
+    border-bottom: 4px solid  #80334B;
+}
+.btn-signup:hover {
+    transform: scale(1.02);
 }
 
 .Large-Hero {
@@ -86,4 +89,71 @@
     font-family: Lato;
     font-weight: 400;
     font-size: 22px;
+    margin-top: 10px;
 }
+.start-now {
+    width: 324px;
+    height: 50px;
+    margin-left: 478px;
+    margin-top: 49px;
+    background-color: #80334B;
+    color: white;
+    border: none;
+    border-radius: 5px solid #80334B;
+    font-family: 'Lato';
+}
+
+ /* second container  */
+
+ .rectangle-1561 {
+     width: 1280px;
+     height: 904px;
+     background-color: #182849;
+     overflow: hidden;
+ }
+
+ .path-2092 {
+     position: absolute;
+     width: 1004px;
+     height: 462px;
+     background-color: white;
+     margin-top: -78px;
+     margin-left: 138px;
+     box-shadow: 0px -1px 20px #00000033;
+     border-radius: 10px;
+ }
+
+ .header-exercise {
+     /* width: 322px; */
+     height: 49px;
+     font-size: 42px;
+     text-align:center ;
+     font-family: 'Lato';
+     font-weight: bold;
+     text-transform: capitalize;
+     margin-top: 22px;
+ }
+ .exercise-slider-nav {
+     position: relative;
+     margin: auto;
+     top: 20px; 
+     width: 232px;
+     height: 28px;
+     display: flex;
+     align-items: center;
+     justify-content:space-around;
+ }
+
+ .slider-tag {
+     text-align: center;
+     font-size: 12px;
+    font-family: 'Lato';
+    color: #676069;
+    text-transform: capitalize;
+ }
+
+ .slider-tag:hover {
+     font-weight: bold;
+     color: black;
+     border-bottom: 3px solid #80334B;
+ }
