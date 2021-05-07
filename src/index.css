@@ -157,3 +157,30 @@
      color: black;
      border-bottom: 3px solid #80334B;
  }
+
+ .exercise-slider {
+     display: flex;
+     margin-top: 55px;
+     justify-content: space-around;
+     align-items: center;
+ }
+
+ #exercise-slider-pic {
+     width: 409px;
+     height: 271px;
+     border-radius: 5%;
+ }
+
+ #exercise-slider-text {
+     width: 324px;
+     height: 172px;
+     font-family: 'Lato';
+     font-size: 16px;
+ }
+
+ .ex-slider-header {
+     font-family: 'Lato';
+     font-weight: 600;
+     font-size: 22px;
+     margin-bottom: 20px;;
+ }
