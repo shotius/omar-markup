@@ -147,18 +147,22 @@ a, a:hover, a:focus, a:active {
 #header-exercise {
     text-align:center ;
  }
- .exercise-slider-nav {
+
+ .switcher-nav {
      position: relative;
-     margin: auto;
      top: 20px; 
-     width: 232px;
-     height: 28px;
      display: flex;
      align-items: center;
      justify-content:space-around;
- }
+     height: 28px;
+}
 
- .slider-tag {
+.exercise-switcher-nav {
+        width: 232px;
+        margin: auto;
+}
+
+ .switcher-tag {
      text-align: center;
      font-size: 12px;
     font-family: 'Lato';
@@ -166,7 +170,7 @@ a, a:hover, a:focus, a:active {
     text-transform: capitalize;
  }
 
- .slider-tag:hover {
+ .switcher-tag:hover {
      font-weight: bold;
      color: black;
      border-bottom: 3px solid #80334B;
@@ -196,7 +200,7 @@ a, a:hover, a:focus, a:active {
      font-family: 'Lato';
      font-weight: 600;
      font-size: 22px;
-     margin-bottom: 20px;;
+     margin-bottom: 25px;;
  }
 
  .nutrition-wrapper {
@@ -206,3 +210,31 @@ a, a:hover, a:focus, a:active {
  #nutrition-header {
      color: white
  }
+
+.nutrition-switcher-nav {
+    width: 279px;
+    justify-content: flex-start;
+}
+.nutrition-tag {
+    color: #EFEFF4;
+    padding: 0px 13px;
+    margin-right: 5px;
+}
+.nutrition-tag:hover {
+    color: white;
+}
+
+#nutrition-switcher-text {
+    width: 409px;
+    height: 157px;
+    color: #EFEFF4;
+    font-family: 'Lato';
+    margin-top: 40px;
+}
+
+#nutrition-switcher-pic {
+    width: 494px;
+    position:absolute;
+    top: 0px;
+    right: 0px;
+}
