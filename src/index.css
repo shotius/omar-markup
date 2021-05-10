@@ -168,6 +168,8 @@ a, a:hover, a:focus, a:active {
     font-family: 'Lato';
     color: #676069;
     text-transform: capitalize;
+    padding: 0px 10px;
+    cursor: pointer;
  }
 
  .switcher-tag:hover {
