@@ -105,15 +105,6 @@ function handleClickNext(carousel, slider, translate) {
     setActiveDot(carousel)
 }
 
-function  setActiveDot(carousel) {
-    const dots = carousel.querySelectorAll('.dot')
-    console.log(current_1)
-    
-    for (let i = 0 ; i < dots.length; i++){
-        dots[i].classList.toggle('active', current_1 === i)
-    }
-}
-
 function handleClickPrev(carousel, slider, translate) {
     // if directon was negative slider has prepended the last element
     // so we need to append it back and then translate
@@ -123,6 +114,14 @@ function handleClickPrev(carousel, slider, translate) {
     }
     carousel.style.justifyContent = "flex-end"
     slider.style.transform = `translate(${translate}%)`
+
+    if (current_1 == 0) {
+        current_1 = 5 
+    } else {
+        current_1 = current_1 - 1
+    }
+    current_1 = (current_1) % slider.childElementCount
+    setActiveDot(carousel)
 }
 
 // this function is called after carousel slide happens
@@ -156,4 +155,14 @@ function generateDots(carousel, n) {
     }
     // append dots to carousel
     carousel.querySelector('.controls').appendChild(dots);
+}
+
+// set active class to a button 
+
+function  setActiveDot(carousel) {
+    const dots = carousel.querySelectorAll('.dot')
+    
+    for (let i = 0 ; i < dots.length; i++){
+        dots[i].classList.toggle('active', current_1 === i)
+    }
 }
