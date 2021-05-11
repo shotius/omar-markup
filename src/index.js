@@ -49,7 +49,7 @@ var direction = -1
 
 var current_1 = 0
 
-const carousel_1 = document.querySelector('.carousel-1')
+const carousel_1 = document.querySelector('.carousel_1')
 const slider_1 = carousel_1.querySelector('.slider')
 
 // control buttons
@@ -70,7 +70,7 @@ slider_1.ontransitionend = () => handleAfterSlide(slider_1);
 
 /* carousel 2 */
 
-const carousel_2 = document.querySelector('.carousel-2')
+const carousel_2 = document.querySelector('.carousel_2')
 const slider_2 = carousel_2.querySelector('.slider')
 
 const prev_btn_2 = carousel_2.querySelector('.prev')
@@ -151,7 +151,7 @@ function generateDots(carousel, n) {
     for (let i = 0; i < n; i++) {
 		dots.innerHTML =
             dots.innerHTML + 
-            '<button class="dot" onclick="goToDiv(' + i + ')"></button>';
+            '<button class="dot" onclick="goToSlide(' + i + ')"></button>';
     }
     // append dots to carousel
     carousel.querySelector('.controls').appendChild(dots);
@@ -165,4 +165,10 @@ function  setActiveDot(carousel) {
     for (let i = 0 ; i < dots.length; i++){
         dots[i].classList.toggle('active', current_1 === i)
     }
+}
+
+function goToSlide(n) {
+    slider_1.style.transform = `translate(${translate_1 * (current_1 - n)}%)`
+    current_1 = n
+    setActiveDot(carousel_1)
 }
