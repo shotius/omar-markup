@@ -38,32 +38,79 @@ function Personolize() {
     .src = 'https://www.nutriheroes.com/img/nutrition-2.png' 
 }
 
-
+// this does not matter for carousel quantity
+var direction = -1
 /* carousel 1 */
 
 const carousel_1 = document.querySelector('.carousel-1')
 const slider = carousel_1.querySelector('.slider')
 
 // conrols of first slider
-const next_carousel_1 = carousel_1.querySelector('.next')
-const prev_carousel_1 = carousel_1.querySelector('.prev')
+const next_1 = carousel_1.querySelector('.next')
+const prev_1 = carousel_1.querySelector('.prev')
 
-var direction = -1
 
+function getTranslate(slider) {
+    const slides = slider.childElementCount
+    return  100 / slides
+}
+
+// // on click next button
+// next_1.addEventListener('click', function() {
+//     let translate = getTranslate(slider)
+//     handleClickNext(carousel_1, slider, direction, translate)
+// })
+
+// prev_1.addEventListener('click', function() {
+//     const slider_count = slider.childElementCount
+//     let translate = 100 / slider_count
+
+//     handleClickPrev(carousel_1, slider, direction, translate)
+// })
 // on click next button
-next_carousel_1.addEventListener('click', function() {
-    const slider_count = slider.childElementCount
-    let translate = 100 / slider_count
 
-    handleClickNext(carousel_1, slider, direction, translate)
+
+next_1.addEventListener('click', function() {
+    // if change direction there already happend child append 
+    // to the end of the slider so we need to revert it back
+    let translate = getTranslate(slider)
+
+    if (direction === 1 ) {
+        direction = -1 
+        slider.prepend(slider.lastElementChild)
+    }
+    carousel_1.style.justifyContent = "flex-start"
+    slider.style.transform = `translate(-${translate}%)`
 })
 
-prev_carousel_1.addEventListener('click', function() {
-    const slider_count = slider.childElementCount
-    let translate = 100 / slider_count
+prev_1.addEventListener('click', function() {
+    // if directon was negative slider has prepended the last element
+    // so we need to append it back and then translate
+    let translate = getTranslate(slider)
 
-    handleClickPrev(carousel_1, slider, direction, translate)
+    if (direction === -1 ) {
+        direction = 1
+        slider.appendChild(slider.firstElementChild)
+    }
+    carousel_1.style.justifyContent = "flex-end"
+    slider.style.transform = `translate(${translate}%)`
 })
+
+// when slider finishes transition
+// on the condition it resets the slider
+slider.ontransitionend = () => {
+    if (direction == -1 ){
+        slider.appendChild(slider.firstElementChild)
+    } else if (direction === 1) {
+        slider.prepend(slider.lastElementChild)
+    }
+
+     slider.style.transition=  'none'
+     slider.style.transform = 'translate(0)'
+    setTimeout(() => {
+        slider.style.transition = "all 0.5s"
+    })
+  };
 
 
 /* carousel 2 */
