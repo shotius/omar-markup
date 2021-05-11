@@ -38,6 +38,8 @@ function Personolize() {
     .src = 'https://www.nutriheroes.com/img/nutrition-2.png' 
 }
 
+/** carousels */
+
 // this is global variable for all carousels
 var direction = -1
 
@@ -46,27 +48,32 @@ var direction = -1
 const carousel_1 = document.querySelector('.carousel-1')
 const slider_1 = carousel_1.querySelector('.slider')
 
-// conrols of first slider
-const next_1 = carousel_1.querySelector('.next')
-const prev_1 = carousel_1.querySelector('.prev')
+// control buttons
+const next_btn_1 = carousel_1.querySelector('.next')
+const prev_btn_1 = carousel_1.querySelector('.prev')
 
 const translate_1 = 100 / slider_1.childElementCount
 
-// on click next button
-next_1.addEventListener('click', () => handleClickNext(carousel_1, slider_1, translate_1))
-
-prev_1.addEventListener('click', () => handleClickPrev(carousel_1, slider_1,  translate_1))
+next_btn_1.addEventListener('click', () => handleClickNext(carousel_1, slider_1, translate_1))
+prev_btn_1.addEventListener('click', () => handleClickPrev(carousel_1, slider_1,  translate_1))
 
 slider_1.ontransitionend = () => handleAfterSlide(slider_1);
 
+
 /* carousel 2 */
 
-// const carousel_2 = document.querySelector('.carousel-2')
+const carousel_2 = document.querySelector('.carousel-2')
+const slider_2 = carousel_2.querySelector('.slider')
 
-// // controls of secons slidr
-// const prev_carousel_2 = document.querySelector('.carousel-2-prev')
-// const next_carousel_2 = document.querySelector('.carousel-2-next')
+const prev_btn_2 = carousel_2.querySelector('.prev')
+const next_btn_2 = carousel_2.querySelector('.next')
 
+const translate_2 = 100 / slider_2.childElementCount
+
+next_btn_2.addEventListener('click', () => handleClickNext(carousel_2, slider_2, translate_2))
+prev_btn_2.addEventListener('click', () => handleClickPrev(carousel_2, slider_2, translate_2))
+
+slider_2.ontransitionend = () => handleAfterSlide(slider_2)
 
 function handleClickNext(carousel, slider, translate) {
     // if change direction_carousel_1 there already happend child append 
