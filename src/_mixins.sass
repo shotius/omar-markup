@@ -36,8 +36,34 @@
     border: none
   .prev
     left: 136px
+    z-index: 10
+
   .next
     right: 136px
+    z-index: 10
+
+  .dots
+    display: flex
+    justify-content: center
+    align-items:  center
+    height: 10px
+    width: 100%
+    display: flex
+    position: absolute
+    bottom: 70px
+    left: 0
+    .dot
+      width: 5px
+      height: 12px
+      border: none
+      cursor: pointer
+      margin: 0 8px
+      background-color: #AF8E9A
+      border-radius: 6px
+      &:hover
+        transform: scale(1.2)
+    .active
+      background-color: white
 
 
   .slider-text
@@ -46,3 +72,4 @@
 
     .sport-experties-header
         margin-bottom: 30px
+    
