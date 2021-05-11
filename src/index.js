@@ -39,20 +39,44 @@ function Personolize() {
 }
 
 
-// slider animation
-const slider = document.querySelector('.slider')
-const carousel = document.querySelector('.carousel-1')
+/* carousel 1 */
 
-const prev = document.querySelector('.prev')
-const next = document.querySelector('.next')
+const carousel_1 = document.querySelector('.carousel-1')
+const slider = carousel_1.querySelector('.slider')
 
-const slider_count = slider.childElementCount
-let translate = 100 / slider_count   
+// conrols of first slider
+const next_carousel_1 = carousel_1.querySelector('.next')
+const prev_carousel_1 = carousel_1.querySelector('.prev')
+
 var direction = -1
 
 // on click next button
-next.addEventListener('click', function() {
-    // if change direction there already happend child append 
+next_carousel_1.addEventListener('click', function() {
+    const slider_count = slider.childElementCount
+    let translate = 100 / slider_count
+
+    handleClickNext(carousel_1, slider, direction, translate)
+})
+
+prev_carousel_1.addEventListener('click', function() {
+    const slider_count = slider.childElementCount
+    let translate = 100 / slider_count
+
+    handleClickPrev(carousel_1, slider, direction, translate)
+})
+
+
+/* carousel 2 */
+
+// const carousel_2 = document.querySelector('.carousel-2')
+
+// // controls of secons slidr
+// const prev_carousel_2 = document.querySelector('.carousel-2-prev')
+// const next_carousel_2 = document.querySelector('.carousel-2-next')
+
+
+function handleClickNext(carousel, slider, direction, translate) {
+    // if change direction_carousel_1 there already happend child append 
     // to the end of the slider so we need to revert it back
     if (direction === 1 ) {
         direction = -1 
@@ -60,9 +84,9 @@ next.addEventListener('click', function() {
     }
     carousel.style.justifyContent = "flex-start"
     slider.style.transform = `translate(-${translate}%)`
-})
+}
 
-prev.addEventListener('click', function() {
+function handleClickPrev(carousel, slider, direction, translate) {
     // if directon was negative slider has prepended the last element
     // so we need to append it back and then translate
     if (direction === -1 ) {
@@ -71,20 +95,23 @@ prev.addEventListener('click', function() {
     }
     carousel.style.justifyContent = "flex-end"
     slider.style.transform = `translate(${translate}%)`
-})
+}
+
 
 // when slider finishes transition
 // on the condition it resets the slider
 slider.ontransitionend = () => {
+    // if slide is done append or prepend the to the queue of slides
     if (direction == -1 ){
         slider.appendChild(slider.firstElementChild)
     } else if (direction === 1) {
         slider.prepend(slider.lastElementChild)
     }
 
-     slider.style.transition=  'none'
-     slider.style.transform = 'translate(0)'
+    // move one slide back when append is done
+    slider.style.transition=  'none'
+    slider.style.transform = 'translate(0)'
     setTimeout(() => {
         slider.style.transition = "all 0.5s"
     })
-  };
+};
