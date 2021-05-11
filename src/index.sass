@@ -1,4 +1,5 @@
 @import './_reset.css'
+@import './_mixins'
 
 html
   scroll-behavior: smooth
@@ -221,47 +222,7 @@ a
   right: 0px
 
 .carousel-1
-  $slide-quantity: 2
-  width: 100%
-  height: 760px
-  border: 1px solid #EFEFF4
-  display: flex
-  justify-content: flex-start
-  margin-bottom: 500px
-  position: relative
-  overflow: hidden
-
-  .slider
-    display: flex
-    height: 100%
-    width: 100% * $slide-quantity
-    flex-shrink: 0
-    transition: all 0.5s
-    section
-      flex-basis: 100% / $slide-quantity
-      width: 100% / $slide-quantity
-      flex-shrink: 0
-      flex: 1
-      display: flex
-      align-items: center
-      justify-content: center
-      img
-        width: 50%
-        height: 100%
-
-  .arrow
-    position: absolute
-    bottom: 52px
-    cursor: pointer
-    height: 40px
-    width: 69px
-    background-color: #FAFAFD
-    border-radius: 4px
-    border: none
-  .prev
-    left: 136px
-  .next
-    right: 136px
+  +carousel(2)
 
 .slider-text
   width: 409px
