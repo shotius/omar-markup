@@ -38,33 +38,26 @@ function Personolize() {
     .src = 'https://www.nutriheroes.com/img/nutrition-2.png' 
 }
 
+// this is global variable for all carousels
+var direction = -1
 
 /* carousel 1 */
 
 const carousel_1 = document.querySelector('.carousel-1')
-const slider = carousel_1.querySelector('.slider')
+const slider_1 = carousel_1.querySelector('.slider')
 
 // conrols of first slider
-const next_carousel_1 = carousel_1.querySelector('.next')
-const prev_carousel_1 = carousel_1.querySelector('.prev')
+const next_1 = carousel_1.querySelector('.next')
+const prev_1 = carousel_1.querySelector('.prev')
 
-var direction = -1
+const translate_1 = 100 / slider_1.childElementCount
 
 // on click next button
-next_carousel_1.addEventListener('click', function() {
-    const slider_count = slider.childElementCount
-    let translate = 100 / slider_count
+next_1.addEventListener('click', () => handleClickNext(carousel_1, slider_1, translate_1))
 
-    handleClickNext(carousel_1, slider, direction, translate)
-})
+prev_1.addEventListener('click', () => handleClickPrev(carousel_1, slider_1,  translate_1))
 
-prev_carousel_1.addEventListener('click', function() {
-    const slider_count = slider.childElementCount
-    let translate = 100 / slider_count
-
-    handleClickPrev(carousel_1, slider, direction, translate)
-})
-
+slider_1.ontransitionend = () => handleAfterSlide(slider_1);
 
 /* carousel 2 */
 
@@ -75,7 +68,7 @@ prev_carousel_1.addEventListener('click', function() {
 // const next_carousel_2 = document.querySelector('.carousel-2-next')
 
 
-function handleClickNext(carousel, slider, direction, translate) {
+function handleClickNext(carousel, slider, translate) {
     // if change direction_carousel_1 there already happend child append 
     // to the end of the slider so we need to revert it back
     if (direction === 1 ) {
@@ -86,7 +79,7 @@ function handleClickNext(carousel, slider, direction, translate) {
     slider.style.transform = `translate(-${translate}%)`
 }
 
-function handleClickPrev(carousel, slider, direction, translate) {
+function handleClickPrev(carousel, slider, translate) {
     // if directon was negative slider has prepended the last element
     // so we need to append it back and then translate
     if (direction === -1 ) {
@@ -97,21 +90,18 @@ function handleClickPrev(carousel, slider, direction, translate) {
     slider.style.transform = `translate(${translate}%)`
 }
 
-
-// when slider finishes transition
-// on the condition it resets the slider
-slider.ontransitionend = () => {
-    // if slide is done append or prepend the to the queue of slides
+function handleAfterSlide(slider) {
+    // if slide action is done append or prepend already slided child to the end ot to the begining of slides deque
     if (direction == -1 ){
         slider.appendChild(slider.firstElementChild)
     } else if (direction === 1) {
         slider.prepend(slider.lastElementChild)
     }
 
-    // move one slide back when append is done
+    // fix the offset
     slider.style.transition=  'none'
     slider.style.transform = 'translate(0)'
     setTimeout(() => {
         slider.style.transition = "all 0.5s"
     })
-};
+}
