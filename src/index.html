@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
     <title>Document</title>
 </head>
 <body>
@@ -24,13 +24,13 @@
             </div>
         </div>
         <div class="Large-Hero">
-            <div class="header captivating-header">Captivating header goes here!</div>
-            <div class="header short-description">A short description works best</div>
+            <h1 class="header captivating-header">Captivating header goes here!</h1>
+            <p class="header short-description">A short description works best</p>
             <button class="btn start-now">Start now</button>
         </div>
         <div class="rectangle-1561">
             <div class="path path-2092">
-                <div id="header-exercise" class="header path-header">exercise</div>
+                <h2 id="header-exercise" class="header path-header">exercise</h2>
                 <div class='switcher-nav exercise-switcher-nav'>
                     <div class="switcher-tag"  onclick=gym()>gym</div>
                     <div class="switcher-tag"  onclick=home()>home</div>
@@ -38,18 +38,51 @@
                 </div>
                 <div class="exercise-slider">
                     <img id="exercise-slider-pic" src='/assests/Mail_Image.png' alt='working out lady'>
-                    <div id="exercise-slider-text"><div class="ex-slider-header">A short title works best </div>At home to gym, crossfit to pilates, yoga to bodyweight, as well as healthy and easy to make breakfasts, lunches, dinners and snacks. We want to make sure you enjoy the journey for a healthy lifestyle.</div>
+                    <div id="exercise-slider-text">
+                        <h3 class="ex-slider-header">A short title works best </h3>
+                        <p>At home to gym, crossfit to pilates, yoga to bodyweight, as well as healthy and easy to make breakfasts, lunches, dinners and snacks. We want to make sure you enjoy the journey for a healthy lifestyle.</p>
+                    </div>
                 </div>
             </div>
             <div class="path nutrition-wrapper">
-                <div id="nutrition-header" class="path-header">nutrition</div>
+                <h2 id="nutrition-header" class="path-header">nutrition</h2>
                 <div class="switcher-nav nutrition-switcher-nav">
-                    <div class="switcher-tag nutrition-tag">Healthy</div>
-                    <div class="switcher-tag nutrition-tag">Personolize</div>
-                    <div class="switcher-tag nutrition-tag">Proffesional</div>
+                    <div class="switcher-tag nutrition-tag"onclick=Healthy()>Healthy</div>
+                    <div class="switcher-tag nutrition-tag"onclick=Personolize()>Personolize</div>
+                    <div class="switcher-tag nutrition-tag"onclick=Health()>Proffesional</div>
                 </div>
-                <div id="nutrition-switcher-text"><div class="ex-slider-header">A short title works best </div>At home to gym, crossfit to pilates, yoga to bodyweight, as well as healthy and easy to make breakfasts, lunches, dinners and snacks. We want to make sure you enjoy the journey for a healthy lifestyle.</div>
+                <div id="nutrition-switcher-text">
+                    <h3 class="ex-slider-header">A short title works best </h3>
+                    <p>At home to gym, crossfit to pilates, yoga to bodyweight, as well as healthy and easy to make breakfasts, lunches, dinners and snacks. We want to make sure you enjoy the journey for a healthy lifestyle.</p>
+                </div>
                 <img id="nutrition-switcher-pic" src="/assests/Rectangle 1473.png" alt='nutrition' >
+            </div>
+        </div>
+        <div class="carousel-1">
+            <div class="slider">
+                <section>
+                    <img src="/assests/Image 1.png" alt="thiery henty" >
+                    <div class="slider-text">
+                        <h2 id="sport-experties-header" class="path-header">Sports Expertise</h2>
+                        <div>
+                            <h3 class="ex-slider-header">Thierry Henry </h3>
+                            <p>Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero, vel malesuada velit. Nullam et maximus lorem. Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero, vel malesuada velit. Nullam et maximus lorem. Praesent eu dolor eu orci vehicula euismod. Vivamus sed sollicitudin libero, vel malesuada velit. Nullam et maximus lorem.</p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <img src="/assests/slide-2.png" alt="workout girl" >
+                    <div class="slider-text">
+                        <h2 class="path-header">Cheryl Teagann</h2>
+                        <div>
+                            <h3 class="ex-slider-header">Thierry Henry </h3>
+                            <p>An international performer and Miss Pole Dance UK 2016 champion and 2017 UK Pole doubles champion. Taught at top London studios, performer at Bodypower.</p>
+                        </div>
+                </section>
+            </div>
+            <div class="controls">
+                <button class="arrow prev"><img src="/assests/Group 2416.svg"></button>
+                <button class="arrow next"><img src="/assests/Group 2350.svg"></button>
             </div>
         </div>
     </div>

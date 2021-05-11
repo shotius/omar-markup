@@ -1,242 +1,310 @@
+@import './_reset.css';
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-a, a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 .wrapper-container {
-    width: 1280px;
-    margin: 0 auto;
+  width: 1280px;
+  margin: 0 auto;
 }
 
 .Rectangle1 {
-    width: 1280px;
-    height: 80px;
-    display: flex;
-    box-shadow: 0px 3px 6px #00000029;
+  width: 1280px;
+  height: 80px;
+  display: flex;
+  box-shadow: 0px 3px 6px #00000029;
 }
 
 .Logo-Black_Full {
-    background-image: url("../assests/Logo\ Black\ Full-1.svg");
-    margin-top: 28px;
-    margin-left: 138px;
-    height: 24px;
-    width: 125px;
+  background-image: url("../assests/Logo Black Full-1.svg");
+  margin-top: 28px;
+  margin-left: 138px;
+  height: 24px;
+  width: 125px;
 }
 
 .navbar-container {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .nav-link {
-    font-size: 14px;
-    height: 17px;
-    text-transform: uppercase;
-    font-family: 'Lato';
-    margin-right: 31px;
+  font-size: 14px;
+  height: 17px;
+  text-transform: uppercase;
+  font-family: "Lato";
+  margin-right: 31px;
 }
 
 .btn-signup {
-    margin-right: 31px;
-    font-family: 'Lato';
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;;
-    height: 40px;
-    width: 69px;
-    background-color: #80334B;
-    color: white;
-    border: 1px solid #80334B;
-    border-radius: 5px;
+  margin-right: 31px;
+  font-family: "Lato";
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 69px;
+  background-color: #80334B;
+  color: white;
+  border: 1px solid #80334B;
+  border-radius: 5px;
 }
 
-.login { 
-    margin-right: 153px;
-    color: #80334B;
+.login {
+  margin-right: 153px;
+  color: #80334B;
 }
 
 .nav-link:hover {
-    font-weight: 900;
-    border-bottom: 4px solid  #80334B;
+  font-weight: 900;
+  border-bottom: 4px solid #80334B;
 }
+
 .btn-signup:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 
 .Large-Hero {
-    /* display: flex; */
-    overflow: hidden;
-    background-image: url('../assests/Large\ Hero.png');
-    width: 1280px;
-    height: 720px;
-    /* justify-content: center; */
+  overflow: hidden;
+  background-image: url("../assests/Large Hero.png");
+  width: 1280px;
+  height: 720px;
 }
 
 .header {
-    margin: auto;
+  margin: auto;
 }
+
 .captivating-header {
-    width: 600px;
-    height: 145px;
-    font-size: 60px;
-    font-family: Lato;
-    font-weight: bold;
-    letter-spacing: 0.02px;
-    text-align: center;
-    text-transform: capitalize;
-    margin-top: 227px;
+  width: 600px;
+  height: 145px;
+  font-size: 60px;
+  font-family: Lato;
+  font-weight: bold;
+  letter-spacing: 0.02px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 227px;
 }
+
 .short-description {
-    width: 294px;
-    height: 27px;
-    font-family: Lato;
-    font-weight: 400;
-    font-size: 22px;
-    margin-top: 10px;
+  width: 294px;
+  height: 27px;
+  font-family: Lato;
+  font-weight: 400;
+  font-size: 22px;
+  margin-top: 10px;
 }
+
 .start-now {
-    width: 324px;
-    height: 50px;
-    margin-left: 478px;
-    margin-top: 49px;
-    background-color: #80334B;
-    color: white;
-    border: none;
-    border-radius: 5px solid #80334B;
-    font-family: 'Lato';
+  width: 324px;
+  height: 50px;
+  margin-left: 478px;
+  margin-top: 49px;
+  background-color: #80334B;
+  color: white;
+  border: none;
+  border-radius: 5px solid #80334B;
+  font-family: "Lato";
 }
 
- /* second container  */
+/* second container */
+.rectangle-1561 {
+  width: 1280px;
+  height: 904px;
+  background-color: #182849;
+  overflow: hidden;
+}
 
- .rectangle-1561 {
-     width: 1280px;
-     height: 904px;
-     background-color: #182849;
-     overflow: hidden;
- }
+.path {
+  position: absolute;
+  width: 1004px;
+  height: 462px;
+  border-radius: 10px;
+  margin-left: 138px;
+}
 
- .path {
-     position: absolute;
-     width: 1004px;
-     height: 462px;
-     border-radius: 10px;
-     margin-left: 138px;
-    }
-    
 .path-2092 {
-    background-color: white;
-    margin-top: -78px;
-    box-shadow: 0px -1px 20px #00000033;
- }
+  background-color: white;
+  margin-top: -78px;
+  box-shadow: 0px -1px 20px #00000033;
+}
 
- .path-header {
-     height: 49px;
-     font-size: 42px;
-     font-family: 'Lato';
-     font-weight: bold;
-     text-transform: capitalize;
-     margin-top: 22px;
-     
-    }
+.path-header {
+  height: 49px;
+  font-size: 42px;
+  font-family: "Lato";
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: 22px;
+}
+
 #header-exercise {
-    text-align:center ;
- }
+  text-align: center;
+}
 
- .switcher-nav {
-     position: relative;
-     top: 20px; 
-     display: flex;
-     align-items: center;
-     justify-content:space-around;
-     height: 28px;
+.switcher-nav {
+  position: relative;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 28px;
 }
 
 .exercise-switcher-nav {
-        width: 232px;
-        margin: auto;
+  width: 232px;
+  margin: auto;
 }
 
- .switcher-tag {
-     text-align: center;
-     font-size: 12px;
-    font-family: 'Lato';
-    color: #676069;
-    text-transform: capitalize;
-    padding: 0px 10px;
-    cursor: pointer;
- }
+.switcher-tag {
+  text-align: center;
+  font-size: 12px;
+  font-family: "Lato";
+  color: #676069;
+  text-transform: capitalize;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+.switcher-tag:hover {
+  font-weight: bold;
+  color: black;
+  border-bottom: 3px solid #80334B;
+}
 
- .switcher-tag:hover {
-     font-weight: bold;
-     color: black;
-     border-bottom: 3px solid #80334B;
- }
+.exercise-slider {
+  display: flex;
+  margin-top: 55px;
+  justify-content: space-around;
+  align-items: center;
+}
 
- .exercise-slider {
-     display: flex;
-     margin-top: 55px;
-     justify-content: space-around;
-     align-items: center;
- }
+#exercise-slider-pic {
+  width: 409px;
+  height: 271px;
+  border-radius: 5%;
+}
 
- #exercise-slider-pic {
-     width: 409px;
-     height: 271px;
-     border-radius: 5%;
- }
+#exercise-slider-text {
+  width: 324px;
+  height: 172px;
+  font-size: 16px;
+}
+#exercise-slider-text p {
+  font-family: "Lato";
+}
 
- #exercise-slider-text {
-     width: 324px;
-     height: 172px;
-     font-family: 'Lato';
-     font-size: 16px;
- }
+.ex-slider-header {
+  font-family: "Lato";
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
 
- .ex-slider-header {
-     font-family: 'Lato';
-     font-weight: 600;
-     font-size: 22px;
-     margin-bottom: 25px;;
- }
+.nutrition-wrapper {
+  margin-top: 490px;
+  height: 319px;
+}
 
- .nutrition-wrapper {
-     margin-top: 490px;
-     height: 319px;
- }
- #nutrition-header {
-     color: white
- }
+#nutrition-header {
+  color: white;
+}
 
 .nutrition-switcher-nav {
-    width: 279px;
-    justify-content: flex-start;
+  width: 279px;
+  justify-content: flex-start;
 }
+
 .nutrition-tag {
-    color: #EFEFF4;
-    padding: 0px 13px;
-    margin-right: 5px;
+  color: #EFEFF4;
+  padding: 0px 13px;
+  margin-right: 5px;
 }
 .nutrition-tag:hover {
-    color: white;
+  color: white;
 }
 
 #nutrition-switcher-text {
-    width: 409px;
-    height: 157px;
-    color: #EFEFF4;
-    font-family: 'Lato';
-    margin-top: 40px;
+  width: 409px;
+  height: 157px;
+  color: #EFEFF4;
+  margin-top: 40px;
+}
+#nutrition-switcher-text p {
+  font-family: "Lato";
 }
 
 #nutrition-switcher-pic {
-    width: 494px;
-    position:absolute;
-    top: 0px;
-    right: 0px;
+  width: 494px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
+
+.carousel-1 {
+  width: 100%;
+  height: 760px;
+  border: 1px solid #EFEFF4;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.carousel-1 .slider {
+  display: flex;
+  height: 100%;
+  width: 200%;
+  flex-shrink: 0;
+  transition: all 0.5s;
+}
+.carousel-1 .slider section {
+  flex-basis: 50%;
+  width: 50%;
+  flex-shrink: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-1 .slider section img {
+  width: 50%;
+  height: 100%;
+}
+.carousel-1 .arrow {
+  position: absolute;
+  bottom: 52px;
+  cursor: pointer;
+  height: 40px;
+  width: 69px;
+  background-color: #FAFAFD;
+  border-radius: 4px;
+  border: none;
+}
+.carousel-1 .prev {
+  left: 136px;
+}
+.carousel-1 .next {
+  right: 136px;
+}
+
+.slider-text {
+  width: 409px;
+  margin: auto;
+}
+.slider-text #sport-experties-header {
+  margin-bottom: 30px;
+}
+
+/*# sourceMappingURL=index.css.map */
