@@ -322,7 +322,8 @@ a:hover, a:focus, a:active {
   border-radius: 6px;
 }
 .carousel_1 .dots .active {
-  background-color: black;
+  background-color: white;
+  border: 1px solid #AF8E9A;
 }
 .carousel_1 .slider-text {
   width: 409px;
@@ -402,7 +403,8 @@ a:hover, a:focus, a:active {
   border-radius: 6px;
 }
 .carousel_2 .dots .active {
-  background-color: black;
+  background-color: white;
+  border: 1px solid #AF8E9A;
 }
 .carousel_2 .slider-text {
   width: 409px;
