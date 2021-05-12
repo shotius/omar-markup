@@ -326,7 +326,7 @@ a:hover, a:focus, a:active {
   transform: scale(1.2);
 }
 .carousel_1 .dots .active {
-  background-color: white;
+  background-color: black;
 }
 .carousel_1 .slider-text {
   width: 409px;
@@ -410,7 +410,7 @@ a:hover, a:focus, a:active {
   transform: scale(1.2);
 }
 .carousel_2 .dots .active {
-  background-color: white;
+  background-color: black;
 }
 .carousel_2 .slider-text {
   width: 409px;
