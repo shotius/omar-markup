@@ -317,13 +317,9 @@ a:hover, a:focus, a:active {
   width: 5px;
   height: 12px;
   border: none;
-  cursor: pointer;
   margin: 0 8px;
   background-color: #AF8E9A;
   border-radius: 6px;
-}
-.carousel_1 .dots .dot:hover {
-  transform: scale(1.2);
 }
 .carousel_1 .dots .active {
   background-color: black;
@@ -401,13 +397,9 @@ a:hover, a:focus, a:active {
   width: 5px;
   height: 12px;
   border: none;
-  cursor: pointer;
   margin: 0 8px;
   background-color: #AF8E9A;
   border-radius: 6px;
-}
-.carousel_2 .dots .dot:hover {
-  transform: scale(1.2);
 }
 .carousel_2 .dots .active {
   background-color: black;
